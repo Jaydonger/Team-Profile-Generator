@@ -1,4 +1,5 @@
- const generateIndex = require('./generateIndex');
+// Declarations and global variables.
+const generateIndex = require('./generateIndex');
 const inquirer = require('inquirer');
 const fs = require('fs');
 
@@ -6,6 +7,7 @@ let employeeArr = [];
 
 addMember();
 
+// function that adds employees to 'employeeArr' and creates html based on the array.
 function addMember() {
 inquirer
   .prompt([
@@ -39,7 +41,7 @@ inquirer
 
 }
 
-
+// prompt for manager employee
 function addManager(employee) {
   inquirer
   .prompt([
@@ -88,6 +90,7 @@ function addManager(employee) {
   })
 }
 
+// prompt for engineer employee
 function addEngineer(employee) {
   inquirer
   .prompt([
@@ -135,6 +138,7 @@ function addEngineer(employee) {
   })
 }
 
+// prompt for intern employee
 function addIntern(employee) {
   inquirer
   .prompt([
@@ -181,8 +185,3 @@ function addIntern(employee) {
     }
   })
 }
-  // const indexPageContent = generateIndex(employeeArr);
-
-  // fs.writeFile('index.html', indexPageContent, (err) =>
-  //   err ? console.log(err) : console.log('Successfully created index.html!')
-  // );

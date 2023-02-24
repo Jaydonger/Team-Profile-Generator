@@ -1,3 +1,5 @@
+
+// function for the base html creation.
 function generateIndex(employees) {
   console.log (employees);
 
@@ -30,6 +32,7 @@ function generateIndex(employees) {
   </html>`;
 }
 
+// function that fills generated html with employee data.
 function generateHtml(employees) {
   const employeeHTML = employees.map(employee => {
     switch (employee.role) {
